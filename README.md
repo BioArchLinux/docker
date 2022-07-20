@@ -6,7 +6,7 @@ Install [docker](https://www.docker.com/) and start it
 
 ```
 docker pull bioarchlinux/bioarchlinux
-docker run -it --name container_name bioarchlinux/bioarchlinux
+docker run -it --name container_name --restart=always bioarchlinux/bioarchlinux /bin/bash
 ```
 
 ## Choose mirror
@@ -30,4 +30,22 @@ Finally, you can install any packages from BioArchLinux
 ```
 pacman -Syu
 pacman -S foo
+```
+
+## Exit
+```
+exit
+```
+
+## Enter
+
+If the container is stoped
+```
+docker restart container_id
+docker exec -it container_id/container_name /bin/bash
+```
+
+If the container is running
+```
+docker exec -it container_id/container_name /bin/bash
 ```
