@@ -1,0 +1,8 @@
+[Unit]
+Description=docker updater
+Wants=dockerhub.timer
+
+[Service]
+User=root
+Type=simple
+ExecStart=/usr/share/lilac/docker/man_docker.sh

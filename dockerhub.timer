@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs docker updater everyday
+
+[Timer]
+OnCalendar=*-*-* 02:00:00
+Unit=dockerhub.service
+
+[Install]
+WantedBy=multi-user.target
