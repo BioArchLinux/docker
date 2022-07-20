@@ -40,15 +40,15 @@ Finally, you can install any packages from BioArchLinux
 
 ## Enter container
 
-If the container is stoped, `container_id` can be replaced with `container_name`
+If the container is stoped, `container_name` can be replaced with `container_id`
 ```
-# docker restart container_id
-# docker exec -it container_id /bin/bash
+# docker restart container_name
+# docker exec -it container_name /bin/bash
 ```
 
-If the container is running, `container_id` can be replaced with `container_name`
+If the container is running, `container_name` can be replaced with `container_id`
 ```
-# docker exec -it container_id /bin/bash
+# docker exec -it container_name /bin/bash
 ```
 ## Get container information
 ```
