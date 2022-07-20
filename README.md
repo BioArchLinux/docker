@@ -6,7 +6,7 @@ Install [docker](https://www.docker.com/) and start it
 
 ```
 # docker pull bioarchlinux/bioarchlinux
-# docker run -it --name container_name --restart=always bioarchlinux/bioarchlinux /bin/bash
+# docker run -it --privileged --name container_name --restart=always bioarchlinux/bioarchlinux /bin/bash
 ```
 ## Configure container
 
