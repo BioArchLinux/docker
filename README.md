@@ -1,6 +1,6 @@
 # BioArchLinux on Docker
 
-## Install docker and pull image
+## Install docker and start container
 
 Install [docker](https://www.docker.com/) and start it
 
@@ -8,8 +8,9 @@ Install [docker](https://www.docker.com/) and start it
 # docker pull bioarchlinux/bioarchlinux
 # docker run -it --name container_name --restart=always bioarchlinux/bioarchlinux /bin/bash
 ```
+## Configure container
 
-## Choose mirror
+### Choose mirror
 then you need to choose a mirror of archlinux and bioarchlinux
 
 choose mirror of archlinux from [here](https://archlinux.org/mirrorlist/) and run the following command ( take sdu mirror as the example)
@@ -24,7 +25,7 @@ choose mirror bioarchlinux from [here](https://raw.githubusercontent.com/BioArch
 # echo 'Server = https://mirrors.sdu.edu.cn/bioarchlinux/$arch' > /etc/pacman.d/mirrorlist.bio
 ```
 
-## Use it
+### Use it
 
 Finally, you can install any packages from BioArchLinux
 ```
@@ -32,12 +33,12 @@ Finally, you can install any packages from BioArchLinux
 # pacman -S foo
 ```
 
-## Exit
+### Exit
 ```
 # exit
 ```
 
-## Enter
+## Enter container
 
 If the container is stoped, `container_id` can be replaced with `container_name`
 ```
@@ -48,4 +49,11 @@ If the container is stoped, `container_id` can be replaced with `container_name`
 If the container is running, `container_id` can be replaced with `container_name`
 ```
 # docker exec -it container_id /bin/bash
+```
+## Get container information
+```
+# docker ps -a
+
+CONTAINER ID   IMAGE                       COMMAND       CREATED       STATUS       PORTS     NAMES
+96bfaee1b8cb   bioarchlinux/bioarchlinux   "/bin/bash"   2 hours ago   Up 2 hours             bio
 ```
