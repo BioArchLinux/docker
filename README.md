@@ -2,7 +2,7 @@
 
 ## Install docker and start container
 
-Install [docker](https://www.docker.com/) and start it
+Install [docker](https://docs.docker.com/get-docker/) and start it
 
 ```
 # docker pull bioarchlinux/bioarchlinux
