@@ -1,5 +1,8 @@
 FROM	archlinux:latest
 
+# Disable sandbox first
+RUN echo "DisableSandbox" >> /etc/pacman.conf
+
 # import bioarchlinux keyring
 RUN	pacman -Syu --noconfirm
 RUN	pacman-key --recv-keys B1F96021DB62254D
